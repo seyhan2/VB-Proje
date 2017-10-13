@@ -63,7 +63,7 @@ Partial Class bitenGorevler
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.ClientSize = New System.Drawing.Size(320, 459)
+        Me.ClientSize = New System.Drawing.Size(342, 459)
         Me.Controls.Add(Me.btn_rapor)
         Me.Controls.Add(Me.lb_bitenGorevler)
         Me.Controls.Add(Me.lbl_bitenGorevler)

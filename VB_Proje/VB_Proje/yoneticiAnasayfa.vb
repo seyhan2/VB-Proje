@@ -1,5 +1,5 @@
 ﻿Public Class yoneticiAnasayfa
-    Private Sub btn_bitenGorevler_Click(sender As Object, e As EventArgs) Handles btn_bitenGorevler.Click
+    Private Sub btn_bitenGorevler_Click(sender As Object, e As EventArgs) Handles btn_bitenGorevler.Click, btn_cikis.Click
         bitenGorevler.Show()
     End Sub
 

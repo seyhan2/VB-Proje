@@ -29,7 +29,6 @@ Partial Class yoneticiAnasayfa
         Me.lbl_baslangic = New System.Windows.Forms.Label()
         Me.dtp_bitis = New System.Windows.Forms.DateTimePicker()
         Me.lbl_bitis = New System.Windows.Forms.Label()
-        Me.cb_personeller = New System.Windows.Forms.ComboBox()
         Me.lbl_personelSec = New System.Windows.Forms.Label()
         Me.cb_gorevTuru = New System.Windows.Forms.ComboBox()
         Me.lbl_gorevTuru = New System.Windows.Forms.Label()
@@ -41,22 +40,24 @@ Partial Class yoneticiAnasayfa
         Me.btn_personelBilgisi = New System.Windows.Forms.Button()
         Me.btn_bitenGorevler = New System.Windows.Forms.Button()
         Me.gb_gorevler = New System.Windows.Forms.GroupBox()
+        Me.lbl_gorevAyrinti = New System.Windows.Forms.Label()
         Me.lbl_ayrinti = New System.Windows.Forms.Label()
         Me.lb_gorevler = New System.Windows.Forms.ListBox()
-        Me.lbl_gorevAyrinti = New System.Windows.Forms.Label()
+        Me.btn_cikis = New System.Windows.Forms.Button()
+        Me.cbl_personeller = New System.Windows.Forms.CheckedListBox()
         Me.gb_yeniGörev.SuspendLayout()
         Me.gb_gorevler.SuspendLayout()
         Me.SuspendLayout()
         '
         'gb_yeniGörev
         '
+        Me.gb_yeniGörev.Controls.Add(Me.cbl_personeller)
         Me.gb_yeniGörev.Controls.Add(Me.cb_birim)
         Me.gb_yeniGörev.Controls.Add(Me.lbl_birim)
         Me.gb_yeniGörev.Controls.Add(Me.dtp_baslangic)
         Me.gb_yeniGörev.Controls.Add(Me.lbl_baslangic)
         Me.gb_yeniGörev.Controls.Add(Me.dtp_bitis)
         Me.gb_yeniGörev.Controls.Add(Me.lbl_bitis)
-        Me.gb_yeniGörev.Controls.Add(Me.cb_personeller)
         Me.gb_yeniGörev.Controls.Add(Me.lbl_personelSec)
         Me.gb_yeniGörev.Controls.Add(Me.cb_gorevTuru)
         Me.gb_yeniGörev.Controls.Add(Me.lbl_gorevTuru)
@@ -94,7 +95,7 @@ Partial Class yoneticiAnasayfa
         '
         'dtp_baslangic
         '
-        Me.dtp_baslangic.Location = New System.Drawing.Point(88, 247)
+        Me.dtp_baslangic.Location = New System.Drawing.Point(88, 281)
         Me.dtp_baslangic.Name = "dtp_baslangic"
         Me.dtp_baslangic.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.dtp_baslangic.Size = New System.Drawing.Size(200, 22)
@@ -102,7 +103,7 @@ Partial Class yoneticiAnasayfa
         '
         'lbl_baslangic
         '
-        Me.lbl_baslangic.Location = New System.Drawing.Point(6, 247)
+        Me.lbl_baslangic.Location = New System.Drawing.Point(6, 281)
         Me.lbl_baslangic.Name = "lbl_baslangic"
         Me.lbl_baslangic.Size = New System.Drawing.Size(76, 36)
         Me.lbl_baslangic.TabIndex = 0
@@ -110,7 +111,7 @@ Partial Class yoneticiAnasayfa
         '
         'dtp_bitis
         '
-        Me.dtp_bitis.Location = New System.Drawing.Point(88, 289)
+        Me.dtp_bitis.Location = New System.Drawing.Point(88, 323)
         Me.dtp_bitis.Name = "dtp_bitis"
         Me.dtp_bitis.Size = New System.Drawing.Size(200, 22)
         Me.dtp_bitis.TabIndex = 7
@@ -118,21 +119,11 @@ Partial Class yoneticiAnasayfa
         'lbl_bitis
         '
         Me.lbl_bitis.AutoSize = True
-        Me.lbl_bitis.Location = New System.Drawing.Point(6, 294)
+        Me.lbl_bitis.Location = New System.Drawing.Point(6, 328)
         Me.lbl_bitis.Name = "lbl_bitis"
         Me.lbl_bitis.Size = New System.Drawing.Size(76, 16)
         Me.lbl_bitis.TabIndex = 0
         Me.lbl_bitis.Text = "Bitiş Tarihi :"
-        '
-        'cb_personeller
-        '
-        Me.cb_personeller.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cb_personeller.FormattingEnabled = True
-        Me.cb_personeller.Items.AddRange(New Object() {"Personel 1", "Personel 2", "Personel 3", "Personel 4"})
-        Me.cb_personeller.Location = New System.Drawing.Point(88, 212)
-        Me.cb_personeller.Name = "cb_personeller"
-        Me.cb_personeller.Size = New System.Drawing.Size(121, 24)
-        Me.cb_personeller.TabIndex = 5
         '
         'lbl_personelSec
         '
@@ -238,6 +229,14 @@ Partial Class yoneticiAnasayfa
         Me.gb_gorevler.TabStop = False
         Me.gb_gorevler.Text = "Görevler"
         '
+        'lbl_gorevAyrinti
+        '
+        Me.lbl_gorevAyrinti.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_gorevAyrinti.Location = New System.Drawing.Point(153, 38)
+        Me.lbl_gorevAyrinti.Name = "lbl_gorevAyrinti"
+        Me.lbl_gorevAyrinti.Size = New System.Drawing.Size(269, 324)
+        Me.lbl_gorevAyrinti.TabIndex = 0
+        '
         'lbl_ayrinti
         '
         Me.lbl_ayrinti.AutoSize = True
@@ -257,13 +256,24 @@ Partial Class yoneticiAnasayfa
         Me.lb_gorevler.Size = New System.Drawing.Size(140, 324)
         Me.lb_gorevler.TabIndex = 0
         '
-        'lbl_gorevAyrinti
+        'btn_cikis
         '
-        Me.lbl_gorevAyrinti.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_gorevAyrinti.Location = New System.Drawing.Point(153, 38)
-        Me.lbl_gorevAyrinti.Name = "lbl_gorevAyrinti"
-        Me.lbl_gorevAyrinti.Size = New System.Drawing.Size(269, 324)
-        Me.lbl_gorevAyrinti.TabIndex = 0
+        Me.btn_cikis.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.btn_cikis.Location = New System.Drawing.Point(12, 12)
+        Me.btn_cikis.Name = "btn_cikis"
+        Me.btn_cikis.Size = New System.Drawing.Size(122, 32)
+        Me.btn_cikis.TabIndex = 10
+        Me.btn_cikis.Text = "Çıkış Yap"
+        Me.btn_cikis.UseVisualStyleBackColor = True
+        '
+        'cbl_personeller
+        '
+        Me.cbl_personeller.FormattingEnabled = True
+        Me.cbl_personeller.Items.AddRange(New Object() {"Personel 1", "Personel 2", "Personel 3", "Personel 4"})
+        Me.cbl_personeller.Location = New System.Drawing.Point(89, 212)
+        Me.cbl_personeller.Name = "cbl_personeller"
+        Me.cbl_personeller.Size = New System.Drawing.Size(120, 55)
+        Me.cbl_personeller.TabIndex = 9
         '
         'yoneticiAnasayfa
         '
@@ -272,6 +282,7 @@ Partial Class yoneticiAnasayfa
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.ClientSize = New System.Drawing.Size(834, 514)
         Me.Controls.Add(Me.gb_gorevler)
+        Me.Controls.Add(Me.btn_cikis)
         Me.Controls.Add(Me.btn_bitenGorevler)
         Me.Controls.Add(Me.btn_personelBilgisi)
         Me.Controls.Add(Me.gb_yeniGörev)
@@ -298,7 +309,6 @@ Partial Class yoneticiAnasayfa
     Friend WithEvents lbl_gorevAdi As Label
     Friend WithEvents dtp_bitis As DateTimePicker
     Friend WithEvents lbl_bitis As Label
-    Friend WithEvents cb_personeller As ComboBox
     Friend WithEvents lbl_personelSec As Label
     Friend WithEvents dtp_baslangic As DateTimePicker
     Friend WithEvents lbl_baslangic As Label
@@ -310,4 +320,6 @@ Partial Class yoneticiAnasayfa
     Friend WithEvents lb_gorevler As ListBox
     Friend WithEvents lbl_ayrinti As Label
     Friend WithEvents lbl_gorevAyrinti As Label
+    Friend WithEvents btn_cikis As Button
+    Friend WithEvents cbl_personeller As CheckedListBox
 End Class

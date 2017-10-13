@@ -27,18 +27,23 @@ Partial Class personelAnasafya
         Me.lbl_soyad = New System.Windows.Forms.Label()
         Me.lbl_ad = New System.Windows.Forms.Label()
         Me.gb_gorevler = New System.Windows.Forms.GroupBox()
+        Me.btn_cikis = New System.Windows.Forms.Button()
         Me.btn_gorevTamamla = New System.Windows.Forms.Button()
         Me.lbl_gorevAciklama = New System.Windows.Forms.Label()
         Me.lbl_gorevNotu = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tb_gorevNotu = New System.Windows.Forms.TextBox()
         Me.lb_gorevler = New System.Windows.Forms.ListBox()
+        Me.lbl_tel = New System.Windows.Forms.Label()
+        Me.lbl_yoneticiTel = New System.Windows.Forms.Label()
         Me.gb_bilgiler.SuspendLayout()
         Me.gb_gorevler.SuspendLayout()
         Me.SuspendLayout()
         '
         'gb_bilgiler
         '
+        Me.gb_bilgiler.Controls.Add(Me.lbl_yoneticiTel)
+        Me.gb_bilgiler.Controls.Add(Me.lbl_tel)
         Me.gb_bilgiler.Controls.Add(Me.lbl_birim)
         Me.gb_bilgiler.Controls.Add(Me.lbl_soyad)
         Me.gb_bilgiler.Controls.Add(Me.lbl_ad)
@@ -53,7 +58,7 @@ Partial Class personelAnasafya
         'lbl_birim
         '
         Me.lbl_birim.AutoSize = True
-        Me.lbl_birim.Location = New System.Drawing.Point(409, 18)
+        Me.lbl_birim.Location = New System.Drawing.Point(325, 18)
         Me.lbl_birim.Name = "lbl_birim"
         Me.lbl_birim.Size = New System.Drawing.Size(47, 16)
         Me.lbl_birim.TabIndex = 2
@@ -62,7 +67,7 @@ Partial Class personelAnasafya
         'lbl_soyad
         '
         Me.lbl_soyad.AutoSize = True
-        Me.lbl_soyad.Location = New System.Drawing.Point(179, 18)
+        Me.lbl_soyad.Location = New System.Drawing.Point(147, 18)
         Me.lbl_soyad.Name = "lbl_soyad"
         Me.lbl_soyad.Size = New System.Drawing.Size(60, 16)
         Me.lbl_soyad.TabIndex = 1
@@ -79,6 +84,7 @@ Partial Class personelAnasafya
         '
         'gb_gorevler
         '
+        Me.gb_gorevler.Controls.Add(Me.btn_cikis)
         Me.gb_gorevler.Controls.Add(Me.btn_gorevTamamla)
         Me.gb_gorevler.Controls.Add(Me.lbl_gorevAciklama)
         Me.gb_gorevler.Controls.Add(Me.lbl_gorevNotu)
@@ -92,6 +98,15 @@ Partial Class personelAnasafya
         Me.gb_gorevler.TabIndex = 0
         Me.gb_gorevler.TabStop = False
         Me.gb_gorevler.Text = "Görevler"
+        '
+        'btn_cikis
+        '
+        Me.btn_cikis.Location = New System.Drawing.Point(10, 357)
+        Me.btn_cikis.Name = "btn_cikis"
+        Me.btn_cikis.Size = New System.Drawing.Size(117, 34)
+        Me.btn_cikis.TabIndex = 3
+        Me.btn_cikis.Text = "Çıkış Yap"
+        Me.btn_cikis.UseVisualStyleBackColor = True
         '
         'btn_gorevTamamla
         '
@@ -146,6 +161,24 @@ Partial Class personelAnasafya
         Me.lb_gorevler.Size = New System.Drawing.Size(191, 308)
         Me.lb_gorevler.TabIndex = 1
         '
+        'lbl_tel
+        '
+        Me.lbl_tel.AutoSize = True
+        Me.lbl_tel.Location = New System.Drawing.Point(455, 18)
+        Me.lbl_tel.Name = "lbl_tel"
+        Me.lbl_tel.Size = New System.Drawing.Size(60, 16)
+        Me.lbl_tel.TabIndex = 2
+        Me.lbl_tel.Text = "Telefon :"
+        '
+        'lbl_yoneticiTel
+        '
+        Me.lbl_yoneticiTel.AutoSize = True
+        Me.lbl_yoneticiTel.Location = New System.Drawing.Point(455, 44)
+        Me.lbl_yoneticiTel.Name = "lbl_yoneticiTel"
+        Me.lbl_yoneticiTel.Size = New System.Drawing.Size(111, 16)
+        Me.lbl_yoneticiTel.TabIndex = 3
+        Me.lbl_yoneticiTel.Text = "Yönetici Telefon :"
+        '
         'personelAnasafya
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -178,4 +211,7 @@ Partial Class personelAnasafya
     Friend WithEvents lbl_birim As Label
     Friend WithEvents lbl_soyad As Label
     Friend WithEvents lbl_ad As Label
+    Friend WithEvents btn_cikis As Button
+    Friend WithEvents lbl_yoneticiTel As Label
+    Friend WithEvents lbl_tel As Label
 End Class
